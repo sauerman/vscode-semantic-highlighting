@@ -1,0 +1,19 @@
+{
+	"name": "vscode-semantic-highlighting",
+	"description": "",
+	"version": "1.0.0",
+	"author": "Maximilian Sauermann",
+	"license": "SEE LICENSE IN LICENSE.md",
+	"engines": {
+		"node": "*"
+	},
+	"dependencies": {
+		"vscode-languageserver": "^3.4.2",
+		"tokenizer": "https://github.com/sauerman/tokenizer.git#417600c38449e98b63774969b7f1c8dae35a795e"
+	},
+	"scripts": {
+		"installServer": "installServerIntoExtension ../client ./package.json ./tsconfig.json",
+		"compile": "installServerIntoExtension ../client ./package.json ./tsconfig.json && tsc -p .",
+		"watch": "installServerIntoExtension ../client ./package.json ./tsconfig.json && tsc -w -p ."
+	}
+}
